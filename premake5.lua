@@ -3,10 +3,10 @@ project "ESCAPI_DLL"
     kind "SharedLib"
     language "C++"
     cppdialect "C++17"
-    staticruntime "off"
+    staticruntime "Off"
     
-    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+    targetdir ("bin/" ..outputdir.. "/%{prj.name}")
+    objdir ("bin-int/" ..outputdir.. "/%{prj.name}")
     targetname "escapi"
     
     defines{
@@ -31,19 +31,11 @@ project "ESCAPI_DLL"
     files{
         "escapi_dll/**.cpp"
     }
-    
-    filter "system:windows"
-        systemversion "latest"
         
     filter "configurations:Debug"
         runtime "Debug"
-        symbols "on"
+        symbols "On"
         
     filter "configurations:Release"
         runtime "Release"
-        optimize "on"
-        
-    filter "configurations:Dist"
-        runtime "Release"
-        optimize "on"
-        
+        optimize "On"
