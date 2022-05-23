@@ -31,6 +31,10 @@ project "ESCAPI_DLL"
     files{
         "escapi_dll/**.cpp"
     }
+    
+    postbuildcommands{
+        ("{COPY} %{cfg.buildtarget.relpath} \"%{wks.location}/bin" ..outputdir.. "/" ..appname.. "/\"")
+    }
         
     filter "configurations:Debug"
         runtime "Debug"
