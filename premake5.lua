@@ -23,7 +23,7 @@ project "ESCAPI_DLL"
     links{
         "mfplat.lib",
         "mf.lib",
-        "mfreaderwrite.lib",
+        "mfreadwrite.lib",
         "mfuuid.lib",
         "shlwapi.lib"
     }
