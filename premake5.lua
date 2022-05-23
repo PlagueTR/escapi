@@ -33,7 +33,7 @@ project "ESCAPI_DLL"
     }
     
     postbuildcommands{
-        ("{COPY} %{cfg.buildtarget.relpath} \"%{wks.location}/bin" ..outputdir.. "/" ..appname.. "/\"")
+        ("{COPY} %{cfg.buildtarget.relpath} \"%{wks.location}/bin/" ..outputdir.. "/" ..appname.. "/\"")
     }
         
     filter "configurations:Debug"
